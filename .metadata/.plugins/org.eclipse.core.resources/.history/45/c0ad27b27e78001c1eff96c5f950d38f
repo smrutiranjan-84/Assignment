@@ -1,0 +1,5 @@
+package com.Neosoft.exception;
+
+public class ResourceNotFoundException {
+
+}

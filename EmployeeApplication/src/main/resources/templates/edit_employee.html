@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Management App</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+crossorigin="anonymous">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Employee Management App</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/employees}">Employee Details</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br><br>
+               <div class= "container">
+                          <div class= "row">
+                <div class= "col-lg-8 col-md-8 col-sm-8 container justify-content-center card">
+                    <h1 class= "text-center">Update Employee</h1>
+                        <div class= "card-body">
+          <form th:action="@{/employees/{id}(id=${employee.id})}" th:object= "${employee}" method="post">
+                 <div class= "form-group">
+                     <label> Employee's First Name</label>
+                     <input
+                         type= "text"
+                         name= "firstName"
+                         th:field= "*{firstName}"
+                         class= "form-control"
+                         placeholder= "Enter Employee's First Name"/>
+                   </div>
+                <div class= "form-group">
+                  <label> Employee's SurName</label>
+                    <input
+                      type = "text"
+                      name = "surName"
+                      th:field = "*{surName}"
+                      class = "form-control"
+                      placeholder = "Enter Employee's SurName"/>
+                 </div>
+               <div class= "form-group">
+               <label> Employee's Email Id</label>
+               <input
+                   type = "text"
+                   name = "emailId"
+                   th:field = "*{emailId}"
+                   class = "form-control"
+                   placeholder = "Enter Employee's Email Id"/>
+                </div>
+                <div class= "form-group">
+               <label> Employee's Contact No</label>
+               <input
+                   type = "text"
+                   name = "contactNo"
+                   th:field = "*{contactNo}"
+                   class = "form-control"
+                   placeholder = "Enter Employee's Contact No"/>
+                </div>
+                <div class= "form-group">
+               <label> Employee's DOB</label>
+               <input
+                   type = "text"
+                   name = "dob"
+                   th:field = "*{dob}"
+                   class = "form-control"
+                   placeholder = "Enter Employee's DOB"/>
+                </div>
+                <div class= "form-group">
+               <label> Employee's Date Of Joining</label>
+               <input
+                   type = "text"
+                   name = "dateOfJoining"
+                   th:field = "*{dateOfJoining}"
+                   class = "form-control"
+                   placeholder = "Enter Employee's Date Of Joining"/>
+                </div>
+                <div class = "box-footer">
+                <button type = "submit" class = "btn btn-primary">
+                Submit
+                </button>
+                
+                </div>
+               
+  
+  
+  
+  
+  
+  
+  </form>
+  
+  </div>
+  
+  
+  </div>
+  
+  
+  
+  </div>
+  
+  
+  </div>
+</body>
+</html>
